@@ -1,3 +1,6 @@
+# custom
+.idea
+.vscode
 # Logs
 logs
 *.log
