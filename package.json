@@ -2,13 +2,12 @@
   "name": "@berakocc/loopy",
   "version": "1.0.0",
   "description": "A functional wrapper for loops in JavaScript",
-  "main": "dist/index.js",
+  "main": "dist/loopy.js.js",
   "scripts": {
     "build": "gulp",
-    "test": "jest --verbose",
-    "flow": "flow",
-    "declaration": "flow gen-flow-files"
+    "test": "jest --verbose"
   },
+  "types": "./dist/loopy.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -29,17 +28,17 @@
   "homepage": "https://github.com/MuhammedBeraKoc/loopy#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-flow": "^7.12.1",
-    "@berakocc/commitify": "^1.0.1",
+    "@berakocc/commitify": "^1.0.2",
     "del": "^6.0.0",
-    "flow-bin": "^0.138.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.3.0",
     "gulp-rename": "^2.0.0",
+    "gulp-run": "^1.7.1",
+    "gulp-uglify": "^3.0.2",
     "jest": "^26.6.3",
-    "prettier": "^2.1.2"
+    "jest-cli": "^26.6.3",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
   }
 }

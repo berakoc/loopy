@@ -1,24 +1,19 @@
 const { src, dest, series } = require('gulp')
-const babel = require('gulp-babel')
 const del = require('del')
-const rename = require('gulp-rename')
+const run = (command) => require('gulp-run')(command, {})
+const uglify = require('gulp-uglify')
 
 const clear = (cb) => {
     del('dist')
     cb()
 }
 
-const transpile = () => {
-    return src('src/loopy.js').pipe(babel()).pipe(dest('dist'))
+const compileTypeScript = () => {
+    return run('tsc').exec()
 }
 
-const renameOutputFile = () => {
-    return src('dist/loopy.js').pipe(rename('index.js')).pipe(dest('dist'))
-}
-
-const removeReplica = (cb) => {
-    del('dist/loopy.js')
-    cb()
+const minify = () => {
+    return src('dist/loopy.js').pipe(uglify()).pipe(dest('dist'))
 }
 
 const finish = (cb) => {
@@ -26,4 +21,4 @@ const finish = (cb) => {
     cb()
 }
 
-exports.default = series(clear, transpile, renameOutputFile, removeReplica, finish)
+exports.default = series(clear, compileTypeScript, minify, finish)
