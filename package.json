@@ -1,8 +1,8 @@
 {
   "name": "@berakocc/loopy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A functional wrapper for loops in JavaScript",
-  "main": "dist/loopy.js.js",
+  "main": "dist/loopy.js",
   "scripts": {
     "build": "gulp",
     "test": "jest --verbose"
