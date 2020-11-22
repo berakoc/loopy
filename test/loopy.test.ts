@@ -8,7 +8,7 @@ describe('Test Suite For Loopy', () => {
             (i) => i < 4,
             (i) => {
                 arr[i] = arr[i] + i
-                return i++
+                return i + 1
             },
             [i]
         )
